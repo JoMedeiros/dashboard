@@ -1,0 +1,14 @@
+import pytest
+import time
+from selenium import webdriver
+
+@pytest.fixture(scope="module")
+def browser():
+    chrome_path = "/home/josivan/Downloads/chrome-linux64/chrome"
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = chrome_path
+    chrome_options.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(options=chrome_options)
+
+    yield driver
+    driver.quit()
