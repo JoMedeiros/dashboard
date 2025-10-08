@@ -8,3 +8,5 @@ dash-bootstrap-components==1.0.0
 selenium==4.6
 pytest
 pytest-selenium
+geckodriver-autoinstaller==0.1.0
+py==1.11.0
